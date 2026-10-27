@@ -9,6 +9,18 @@
 </head>
 <body>
 
+    <div class="music-player">
+    <p>🎀 a little birthday melody 🎀</p>
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/musik.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleMusic()" id="musicButton">
+        🎵 Play our birthday song ♡
+    </button>
+</div>
+
     <h1>Happy 19th Birthday, Njutt! 🎀💗</h1>
 
     <p>Finally 19, pretty girl!! 🧁</p>
@@ -225,6 +237,24 @@
             });
         }
     }
+
+    function toggleMusic() {
+    const music = document.getElementById('birthdayMusic');
+    const button = document.getElementById('musicButton');
+
+    if (music.paused) {
+        music.play()
+            .then(() => {
+                button.textContent = '⏸️ Pause birthday song ♡';
+            })
+            .catch(() => {
+                alert('Musiknya belum bisa diputar. Coba cek file musiknya yaa! 🎵');
+            });
+    } else {
+        music.pause();
+        button.textContent = '🎵 Play our birthday song ♡';
+    }
+}
 </script>
 
 <footer class="birthday-ending">

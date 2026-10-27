@@ -1,15 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 
+
 :root {
-    --cream: #fffaf5;
-    --pink: #f8e3eb;
-    --rose: #d78ba6;
-    --deep-rose: #9e536f;
-    --cherry: #873e59;
-    --text: #654653;
-    --muted: #a1828d;
+    --pink: #e8bfd0;
+    --light-pink: #fff2f7;
+    --dark-pink: #b56f8c;
+    --cream: #fffaf6;
+    --text: #765765;
+    --white: #ffffff;
 }
+
 
 * {
     margin: 0;
@@ -23,14 +24,13 @@ html {
 
 body {
     font-family: 'DM Sans', sans-serif;
-    color: var(--text);
+    color: var(--text);  
     background-color: var(--cream);
     background-image:
-        radial-gradient(ellipse at 10% 15%, #f9e4ec 0, transparent 35%),
-        radial-gradient(ellipse at 90% 75%, #f8e8e9 0, transparent 32%);
-    min-height: 100vh;
-    text-align: center;
-    overflow-x: hidden;
+        radial-gradient(ellipse at 8% 12%, #ffc2dc 0, transparent 35%),
+        radial-gradient(ellipse at 92% 72%, #ffd0df 0, transparent 35%),
+        radial-gradient(ellipse at 50% 45%, #fff0f5 0, transparent 60%);
+
 }
 
 body::before {
@@ -483,4 +483,577 @@ button:hover {
         padding: 45px 18px;
         margin-top: 55px;
     }
+}
+/* ===== BIRTHDAY FOOTER ===== */
+.birthday-footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffb6d2, #f58ab7, #ffd1e2);
+    border-top: 3px dashed #c7477b;
+    color: #76264b;
+    font-family: Georgia, serif;
+}
+
+.birthday-footer p {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.birthday-footer span {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* ===== PINK COQUETTE COLOR UPGRADE ===== */
+
+body {
+    background-color: #fff0f6;
+    background-image:
+        radial-gradient(ellipse at 8% 12%, #ff9fc8 0, transparent 38%),
+        radial-gradient(ellipse at 92% 72%, #ffb5d4 0, transparent 38%),
+        linear-gradient(135deg, #fff0f6, #ffe0ed);
+}
+
+h1 {
+    color: #9e174f;
+    text-shadow: 2px 3px 0 #ffc1db;
+}
+
+h1 span,
+.memory-section h2 span,
+.letter-section h2 span,
+.birthday-ending h2 span {
+    color: #e04488;
+}
+
+p {
+    color: #8b4565;
+}
+
+.memory-section {
+    background: #ffe4ef;
+    border-top: 2px solid #f3a0c2;
+    border-bottom: 2px solid #f3a0c2;
+    border-radius: 24px;
+}
+
+.memory-section h2,
+.letter-section h2,
+.birthday-ending h2 {
+    color: #a52c60;
+}
+
+.polaroid {
+    background: #fff7fb;
+    border: 2px solid #ffc3dc;
+    box-shadow: 0 10px 25px #bd467733;
+}
+
+.polaroid figcaption {
+    color: #b32f69;
+}
+
+.tape {
+    background: #ff9fc8d9;
+}
+
+.letter-section {
+    background: #ffe4ef;
+    border: 2px solid #f3a0c2;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px #bd46771c;
+}
+
+.letter-paper {
+    background: #fff7fb;
+    border: 2px solid #ffc1da;
+    box-shadow: 5px 6px 0 #f3a0c2;
+    border-radius: 12px;
+}
+
+.letter-paper .letter-dear,
+.letter-paper .letter-sign {
+    color: #b32f69;
+}
+
+button,
+.letter-button {
+    background: linear-gradient(135deg, #e94f91, #c92d70);
+    color: white;
+    border: 1px solid #b82060;
+    box-shadow: 0 7px 18px #c92d7040;
+}
+
+button:hover,
+.letter-button:hover {
+    background: #a51e59;
+}
+
+.birthday-ending {
+    background: #ffe4ef;
+    border-top: 2px dashed #e779a7;
+    border-radius: 24px;
+}
+
+.ending-stars,
+.ending-love {
+    color: #b32f69;
+}
+
+.birthday-footer {
+    background: linear-gradient(135deg, #ff91bd, #f45d9c, #ffb1d0);
+    color: #7b1746;
+    border-top: 3px dashed #a51e59;
+}
+
+.birthday-footer p {
+    color: #7b1746;
+}
+
+body::before,
+body::after {
+    color: #e04488;
+}
+/* ===== LETTER MAKEOVER ===== */
+
+.letter-paper {
+    max-width: 600px;
+    padding: 35px 30px;
+    margin: 35px auto 0;
+    background: #fff8fc;
+    border: 2px solid #f4a5c6;
+    border-radius: 8px 20px 8px 20px;
+    box-shadow: 8px 8px 0 #f6c2d8;
+}
+
+.letter-paper p {
+    color: #754258;
+    font-size: 0.95rem;
+    line-height: 2;
+}
+
+.letter-paper .letter-dear {
+    color: #b52265;
+    font-size: 1.5rem;
+}
+
+.letter-paper .letter-sign {
+    color: #b52265;
+}
+
+body::before,
+body::after {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.letter-section {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .letter-paper {
+        padding: 24px 18px;
+    }
+
+    .letter-paper p {
+        font-size: 0.9rem;
+    }
+}
+/* ===== FINAL LITTLE TOUCHES ===== */
+
+body::after {
+    right: 12px;
+    bottom: 12px;
+    font-size: 34px;
+    opacity: 0.75;
+}
+
+.letter-paper p {
+    color: #704054;
+}
+
+.letter-paper .letter-dear,
+.letter-paper .letter-sign {
+    color: #b52265;
+}
+
+/* ===== NJUTT'S BIRTHDAY INTRO ===== */
+
+body > h1 {
+    max-width: 900px;
+    margin: 65px auto 20px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: #a51e59;
+    text-shadow: 2px 3px 0 #ffc1da;
+    animation: introAppear 1s ease both;
+}
+
+body > h1::before {
+    content: "୨୧  HAPPY BIRTHDAY ୨୧";
+    display: block;
+    margin-bottom: 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #d6337c;
+    text-shadow: none;
+}
+
+body > h1 + p {
+    margin-top: 20px;
+    color: #c02f70;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+body > h1 + p ~ p {
+    max-width: 650px;
+    padding: 0 18px;
+    text-align: center;
+    color: #85425f;
+}
+
+body > h1 + p ~ button {
+    display: block;
+    margin: 30px auto 0;
+}
+
+@keyframes introAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    body > h1 {
+        margin-top: 55px;
+        padding: 0 16px;
+    }
+
+    body > h1::before {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    body > h1 + p {
+        font-size: 1.15rem;
+    }
+}
+
+/* ===== FLOATING COQUETTE DECORATIONS ===== */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -60px;
+    left: var(--left);
+    color: #e75b96;
+    font-size: var(--size);
+    opacity: 0;
+    animation: floatUp var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+.floating-hearts span:nth-child(1) {
+    --left: 12%;
+    --size: 24px;
+    --duration: 11s;
+    --delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    --left: 30%;
+    --size: 28px;
+    --duration: 14s;
+    --delay: 3s;
+}
+
+.floating-hearts span:nth-child(3) {
+    --left: 52%;
+    --size: 22px;
+    --duration: 12s;
+    --delay: 5s;
+}
+
+.floating-hearts span:nth-child(4) {
+    --left: 70%;
+    --size: 25px;
+    --duration: 15s;
+    --delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    --left: 84%;
+    --size: 30px;
+    --duration: 13s;
+    --delay: 6s;
+}
+
+.floating-hearts span:nth-child(6) {
+    --left: 93%;
+    --size: 20px;
+    --duration: 12s;
+    --delay: 8s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-hearts span {
+        animation: none;
+        display: none;
+    }
+}
+/* Birthday Music Player 🎀 */
+.music-player {
+    width: min(90%, 360px);
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff7fa, #f8dfe9);
+    border: 2px solid #e8bfd0;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(150, 90, 115, 0.10);
+    position: relative;
+    z-index: 2;
+}
+
+.music-player p {
+    margin: 0 0 14px;
+    color: #92536f;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#musicButton {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    background: #c982a2;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(150, 90, 115, 0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+
+#musicButton:hover {
+    background: #b56c8d;
+    transform: translateY(-3px);
+}
+
+#musicButton:active {
+    transform: scale(0.96);
+}
+/* SOFT DUSTY PINK THEME 🎀 */
+
+body {
+    background-color: #fff8fa;
+    color: #765765;
+}
+
+body > h1 {
+    color: #a56b84;
+    text-shadow: 2px 3px 0 #f3dce6;
+}
+
+body > h1::before {
+    color: #bd829b;
+}
+
+.memory-section,
+.letter-section {
+    color: #765765;
+}
+
+.memory-section h2,
+.letter-section h2 {
+    color: #a56b84;
+}
+
+.memory-section h2 span,
+.letter-section h2 span {
+    color: #bd829b;
+}
+
+.eyebrow,
+.gallery-intro,
+.letter-hint {
+    color: #9a7586;
+}
+
+.polaroid {
+    background-color: #fffaf7;
+    border-color: #f0dce4;
+}
+
+.polaroid figcaption {
+    color: #8d6879;
+}
+
+.letter-paper {
+    background-color: #fffaf6;
+    border-color: #e8c9d7;
+    color: #765765;
+}
+
+.letter-dear,
+.letter-sign {
+    color: #a56b84;
+}
+
+button,
+.letter-button,
+#musicButton {
+    background-color: #c58ba4;
+    color: #ffffff;
+}
+
+button:hover,
+.letter-button:hover,
+#musicButton:hover {
+    background-color: #ad718c;
+}
+
+.birthday-ending {
+    background: linear-gradient(135deg, #fff2f7, #f3dfe8);
+    color: #765765;
+}
+
+.birthday-ending h2,
+.birthday-ending .ending-love {
+    color: #a56b84;
+}
+
+.floating-hearts span {
+    opacity: 0.55;
+}
+/* MUTED DUSTY ROSE THEME 🎀 */
+
+body {
+    background-color: #eadde0;
+    color: #59474e;
+}
+
+body > h1 {
+    color: #87566a;
+    text-shadow: 2px 3px 0 #d8c0c9;
+}
+
+body > h1::before {
+    color: #96677a;
+}
+
+.memory-section h2,
+.letter-section h2 {
+    color: #87566a;
+}
+
+.memory-section h2 span,
+.letter-section h2 span {
+    color: #a27688;
+}
+
+.eyebrow,
+.gallery-intro,
+.letter-hint {
+    color: #806671;
+}
+
+.polaroid {
+    background-color: #f4ece7;
+    border-color: #d5bdc5;
+}
+
+.polaroid figcaption {
+    color: #725762;
+}
+
+.letter-paper {
+    background-color: #f4ece7;
+    border-color: #d2b5c1;
+    color: #59474e;
+}
+
+.letter-dear,
+.letter-sign {
+    color: #87566a;
+}
+
+.music-player {
+    background: linear-gradient(135deg, #f0e3e6, #dfc8d1);
+    border-color: #c7a5b3;
+    box-shadow: 0 8px 20px rgba(75, 48, 59, 0.10);
+}
+
+.music-player p {
+    color: #785264;
+}
+
+button,
+.letter-button,
+#musicButton {
+    background-color: #a8758a;
+    color: #ffffff;
+}
+
+button:hover,
+.letter-button:hover,
+#musicButton:hover {
+    background-color: #89596f;
+}
+
+.birthday-ending {
+    background: linear-gradient(135deg, #e5d3da, #d8c1cb);
+    color: #59474e;
+}
+
+.birthday-ending h2,
+.birthday-ending .ending-love {
+    color: #87566a;
 }
