@@ -1,0 +1,486 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+    --cream: #fffaf5;
+    --pink: #f8e3eb;
+    --rose: #d78ba6;
+    --deep-rose: #9e536f;
+    --cherry: #873e59;
+    --text: #654653;
+    --muted: #a1828d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(ellipse at 10% 15%, #f9e4ec 0, transparent 35%),
+        radial-gradient(ellipse at 90% 75%, #f8e8e9 0, transparent 32%);
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "୨୧";
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    color: var(--rose);
+    font-size: 45px;
+    z-index: 5;
+    transform: rotate(-12deg);
+    pointer-events: none;
+}
+
+body::after {
+    content: "♡";
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    color: var(--rose);
+    font-size: 45px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+h1 {
+    color: var(--cherry);
+    font-size: clamp(2.7rem, 8vw, 5.8rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 22px auto;
+}
+
+h1 span {
+    color: var(--deep-rose);
+    font-style: italic;
+}
+
+p {
+    max-width: 600px;
+    margin: 18px auto;
+    font-size: 0.98rem;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform .25s ease, background .25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+/* small coquette details */
+
+body {
+    position: relative;
+}
+
+h1::before {
+    content: "✳";
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 10px;
+    color: var(--rose);
+    margin-bottom: 22px;
+}
+
+p:first-of-type {
+    letter-spacing: .02em;
+}
+
+button {
+    padding: 15px 27px;
+    border: 1px solid #d78ba6;
+    border-radius: 40px;
+    background: var(--deep-rose);
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    box-shadow: 0 8px 22px #9e536f20;
+}
+
+button:hover {
+    background: var(--cherry);
+}
+
+@media (max-width: 600px) {
+    body::before {
+        top: 12px;
+        left: 12px;
+        font-size: 34px;
+    }
+
+    body::after {
+        right: 12px;
+        bottom: 12px;
+        font-size: 34px;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    p {
+        font-size: .91rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+
+/* ===== NJUTT'S SCRAPBOOK GALLERY ===== */
+
+.memory-section {
+    position: relative;
+    margin: 100px auto 50px;
+    padding: 55px 20px 45px;
+    max-width: 1050px;
+    border-top: 1px solid #e9c8d5;
+    border-bottom: 1px solid #e9c8d5;
+    background: #fffaf5b8;
+}
+
+.eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #b87891;
+    margin-bottom: 18px;
+}
+
+.memory-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    color: #873e59;
+    margin-bottom: 12px;
+}
+
+.memory-section h2 span {
+    font-style: italic;
+    color: #d78ba6;
+}
+
+.gallery-intro {
+    max-width: 460px;
+    margin: 0 auto 45px;
+    font-size: 0.9rem;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px 0;
+}
+
+.polaroid {
+    position: relative;
+    width: 215px;
+    padding: 11px 11px 18px;
+    background: #fff;
+    box-shadow: 0 8px 25px #754b5c1c;
+    border: 1px solid #f4e9e9;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    background: #f8e3eb;
+}
+
+.polaroid figcaption {
+    padding-top: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: #9e536f;
+}
+
+.polaroid-one {
+    transform: rotate(-6deg);
+}
+
+.polaroid-two {
+    transform: rotate(4deg) translateY(12px);
+}
+
+.polaroid-three {
+    transform: rotate(-3deg) translateY(-5px);
+}
+
+.polaroid-four {
+    transform: rotate(6deg) translateY(10px);
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.04);
+    box-shadow: 0 15px 35px #754b5c2b;
+    z-index: 2;
+}
+
+.tape {
+    position: absolute;
+    width: 66px;
+    height: 19px;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+    background: #edc4d4c9;
+    border-left: 1px dashed #ffffffb5;
+    border-right: 1px dashed #ffffffb5;
+    z-index: 2;
+}
+
+.polaroid-two .tape {
+    background: #ead9aecc;
+    transform: translateX(-50%) rotate(5deg);
+}
+
+.polaroid-three .tape {
+    background: #d9c9e8cc;
+}
+
+.polaroid-four .tape {
+    background: #f2c1b7cc;
+    transform: translateX(-50%) rotate(4deg);
+}
+
+.gallery-footer {
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #b87891;
+}
+
+@media (max-width: 600px) {
+    .memory-section {
+        margin-top: 70px;
+        padding: 40px 12px;
+    }
+
+    .photo-gallery {
+        gap: 30px 20px;
+    }
+
+    .polaroid {
+        width: min(42%, 190px);
+        padding: 8px 8px 14px;
+    }
+
+    .polaroid img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .polaroid figcaption {
+        font-size: 0.78rem;
+        padding-top: 12px;
+    }
+}
+
+/* ===== A SECRET LETTER FOR NJUTT ===== */
+
+.letter-section {
+    max-width: 760px;
+    margin: 90px auto;
+    padding: 55px 22px;
+    border: 1px solid #efd6df;
+    background: #fffaf5d9;
+    box-shadow: 0 15px 40px #754b5c0a;
+    position: relative;
+}
+
+.letter-section::before,
+.letter-section::after {
+    content: "✿";
+    position: absolute;
+    color: #d78ba6;
+    font-size: 25px;
+}
+
+.letter-section::before {
+    top: 15px;
+    left: 18px;
+}
+
+.letter-section::after {
+    right: 18px;
+    bottom: 15px;
+}
+
+.letter-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #873e59;
+    margin-bottom: 15px;
+}
+
+.letter-section h2 span {
+    font-style: italic;
+    color: #d78ba6;
+}
+
+.letter-hint {
+    font-size: .9rem;
+    margin-bottom: 25px;
+}
+
+.letter-button {
+    background: #9e536f;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 35px;
+    font-size: .9rem;
+    box-shadow: 0 8px 20px #9e536f22;
+}
+
+.letter-paper {
+    max-width: 540px;
+    margin: 35px auto 0;
+    padding: 30px 25px;
+    background: #fff5f0;
+    border: 1px solid #f0d6dc;
+    box-shadow: 4px 5px 0 #f1dce2;
+    text-align: left;
+    animation: letterAppear .6s ease;
+}
+
+.letter-paper[hidden] {
+    display: none;
+}
+
+.letter-paper p {
+    font-size: .92rem;
+    line-height: 1.9;
+    margin: 15px 0;
+}
+
+.letter-paper .letter-dear {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #9e536f;
+}
+
+.letter-paper .letter-sign {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #9e536f;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .letter-section {
+        margin: 65px 8px;
+        padding: 45px 16px;
+    }
+
+    .letter-paper {
+        padding: 22px 17px;
+    }
+}
+
+
+/* ===== FINAL SCRAPBOOK PAGE ===== */
+
+.birthday-ending {
+    max-width: 850px;
+    margin: 80px auto 35px;
+    padding: 65px 25px;
+    border-top: 1px solid #e9c8d5;
+    text-align: center;
+    position: relative;
+}
+
+.ending-stars {
+    color: #c7819b;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    font-size: .9rem;
+    margin-bottom: 25px;
+}
+
+.birthday-ending h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.3;
+    color: #873e59;
+    margin: 22px auto;
+}
+
+.birthday-ending h2 span {
+    font-style: italic;
+    color: #d78ba6;
+}
+
+.ending-message {
+    max-width: 490px;
+    font-size: .92rem;
+    margin: 25px auto;
+}
+
+.ending-love {
+    color: #9e536f;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .birthday-ending {
+        padding: 45px 18px;
+        margin-top: 55px;
+    }
+}
